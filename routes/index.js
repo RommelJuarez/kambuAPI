@@ -1,9 +1,12 @@
 const routes=require('express').Router();
+const productsRoutes=require('./products');
+
+routes.use('/',require('./swagger'));
 
 
-routes.use('/',(req,res)=>{
-    res.send('KambuAPI');
-});
+routes.use('/products',productsRoutes);
+
+
 
 
 
