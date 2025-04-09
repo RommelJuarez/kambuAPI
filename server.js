@@ -1,5 +1,5 @@
 const express=require('express');
-const{initDB}=require('./db/dbconnection');
+const{initDB}=require('./db/dbConn');
 const cors=require('cors');
 
 const app=express();
