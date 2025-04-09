@@ -31,7 +31,12 @@ const customerSchema = new Schema({
       type: String,
       required: true
     },
-    state: {
+    provinceOrState:
+    {
+      type: String,
+      required: true
+    },
+    country: {
       type: String,
       required: true
     },
