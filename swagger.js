@@ -6,7 +6,7 @@ const doc = {
     description: 'This API allows the administrators of our e-commerce platform to perform CRUD operations to manipulate their database.'
   },
   host: 'localhost:8080',
-  schemes:['http','https'],
+  schemes:['https','http'],
   tags:[{name:'Customers'},{name:'Products'},{name:'Categories'},{name:'Reviews'}]
 };
 
