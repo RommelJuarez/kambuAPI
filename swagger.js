@@ -1,14 +1,16 @@
-const swaggerAutogen= require('swagger-autogen')();
+const swaggerAutogen = require('swagger-autogen')();
 
-const doc={
-    info:{
-        title:'KambuApi',
-        description:'KambuApi api documentation'
-    },
-    host:'localhost:8080',
-    schemes:['http','https'],
-    tags:[{name:'Customers'},{name:'Products'},{name:'Categories'},{name:'Reviews'}]
+const doc = {
+  info: {
+    title: 'KambuAPI',
+    description: 'This API allows the administrators of our e-commerce platform to perform CRUD operations to manipulate their database.'
+  },
+  host: 'localhost:8080',
+  schemes:['http','https'],
+  tags:[{name:'Customers'},{name:'Products'},{name:'Categories'},{name:'Reviews'}]
 };
-const outputFile='./swagger.json';
-const endpointsFiles=['./routes/index.js'];
-swaggerAutogen(outputFile,endpointsFiles,doc);
+
+const outputFile = './swagger.json';
+const routes = ['./routes/index.js'];
+
+swaggerAutogen(outputFile, routes, doc);
