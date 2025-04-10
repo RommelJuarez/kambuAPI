@@ -1,13 +1,9 @@
 const routes=require('express').Router();
+const productsRoutes=require('./products');
 const customersRoutes=require('./customersRoutes');
-const swaggerRoute=require('./swagger');
 
-routes.get('/',(req,res)=>{
-    res.send('KambuAPI');
-});
-
-routes.use('/', swaggerRoute); 
-
+routes.use('/',require('./swagger'));
+routes.use('/products',productsRoutes);
 routes.use('/customers', customersRoutes);
 
 module.exports=routes;
