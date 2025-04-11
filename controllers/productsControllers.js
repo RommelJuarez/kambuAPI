@@ -10,7 +10,7 @@ const getAllProducts=async(req,res)=>{
         console.log('Collection:',productModel.collection.name);
     } catch (error) {
         console.error('Error loading products from database',error);
-        res.status(500).json('Error loading products from database');
+        res.status(500).json({message:'Error loading products from database',error:error.message});
     }
 };
 
@@ -25,7 +25,7 @@ const getOneProduct=async(req,res)=>{
         console.log('Collection:',productModel.collection.name);
     } catch (error) {
         console.error('Error loading products from database',error);
-        res.status(500).json('Error loading products from database');
+        res.status(500).json({message:'Error loading products from database',error:error.message});
     }
 };
 
@@ -45,7 +45,7 @@ const createProduct=async(req,res)=>{
         console.log('Collection:',productModel.collection.name);
     } catch (error) {
         console.error('Error creating product ',error);
-        res.status(500).json('Error creating product ');
+        res.status(500).json({message:'Error creating product ',error:error.message});
     }
 };
 
@@ -89,7 +89,7 @@ const deleteProduct=async(req,res)=>{
         console.log('Collection:',productModel.collection.name);
     } catch (error) {
         console.error("Error deleting Product:", error);
-        res.status(500).json({ error: "Error deleting Product" });
+        res.status(500).json({message:'Error deleting Product:',error:error.message});
     }
 };
 
