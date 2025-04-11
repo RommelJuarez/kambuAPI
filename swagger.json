@@ -191,7 +191,7 @@
         "description": "",
         "parameters": [
           {
-            "name": "body",
+            "name": "obj",
             "in": "body",
             "schema": {
               "type": "object",
@@ -209,7 +209,26 @@
                   "example": "any"
                 },
                 "address": {
-                  "example": "any"
+                  "properties": {
+                    "street": {
+                      "example": "any"
+                    },
+                    "number": {
+                      "example": "any"
+                    },
+                    "neighborhood": {
+                      "example": "any"
+                    },
+                    "provinceOrState": {
+                      "example": "any"
+                    },
+                    "country": {
+                      "example": "any"
+                    },
+                    "zipCode": {
+                      "example": "any"
+                    }
+                  }
                 }
               }
             }
@@ -260,7 +279,7 @@
             "type": "string"
           },
           {
-            "name": "body",
+            "name": "obj",
             "in": "body",
             "schema": {
               "type": "object",
@@ -278,7 +297,26 @@
                   "example": "any"
                 },
                 "address": {
-                  "example": "any"
+                  "properties": {
+                    "street": {
+                      "example": "any"
+                    },
+                    "number": {
+                      "example": "any"
+                    },
+                    "neighborhood": {
+                      "example": "any"
+                    },
+                    "provinceOrState": {
+                      "example": "any"
+                    },
+                    "country": {
+                      "example": "any"
+                    },
+                    "zipCode": {
+                      "example": "any"
+                    }
+                  }
                 }
               }
             }
