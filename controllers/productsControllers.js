@@ -5,6 +5,9 @@ const getAllProducts=async(req,res)=>{
     try {
         const product=await productModel.find();
         res.status(200).json(product);
+        if(!product){
+            return res.status(404).json({message:'Products is empty'});
+        }
         console.log('--Get All Products--');
         console.log('Database:',mongoose.connection.name);
         console.log('Collection:',productModel.collection.name);
@@ -19,6 +22,9 @@ const getOneProduct=async(req,res)=>{
     try {
         const productId=req.params.id;
         const product=await productModel.findById(productId);
+        if(!product){
+            return res.status(404).json({message:'Product not found'});
+        }
         res.status(200).json(product);
         console.log('--Get One Product--');
         console.log('Database:',mongoose.connection.name);
