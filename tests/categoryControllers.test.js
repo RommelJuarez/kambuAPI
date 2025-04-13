@@ -8,7 +8,7 @@ jest.mock('../models/categorySchema');
 
 app.use(express.json());
 
-// Set up routes for testing
+//routes for testing
 app.get('/api/categories', categoryController.getAllCategories);
 app.get('/api/categories/:id', categoryController.getOneCategory);
 app.post('/api/categories', categoryController.createCategory);

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const reviewsControllers = require('../controllers/reviewsControllers');
 const { reviewRules, validate } = require('../middlewares/reviewsValidators');
-const { isAuthenticated } = require('../oauth/authenticate')
+const { isAuthenticated } = require('../oauth/authenticate');
 
 router.get('/', reviewsControllers.getAllReviews);
 
